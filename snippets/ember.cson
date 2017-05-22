@@ -11,6 +11,7 @@
     'leftLabel': 'Ember'
     'body': """
       import Ember from 'ember';
+
       const { ${1} } = Ember;
     """
 
@@ -38,6 +39,11 @@
     'leftLabel': 'Ember'
     'body': 'let $1 = ${2:this}.get(\'$1\');'
 
+  'const ... get(...)':
+    'prefix': 'cget'
+    'leftLabel': 'Ember'
+    'body': 'const $1 = ${2:this}.get(\'$1\');'
+
   '.set(...)':
     'prefix': 'set'
     'leftLabel': 'Ember'
@@ -57,7 +63,7 @@
     'prefix': 'init'
     'leftLabel': 'Ember'
     'body':"""
-      init(){
+      init() {
         this._super(...arguments);
         ${1}
       },
@@ -72,7 +78,7 @@
     'prefix': 'computed'
     'leftLabel': 'Ember'
     'body': """
-      computed('${1:property}', function() {
+      Ember.computed('${1:property}', function() {
         ${2:// body}
       }),
     """
@@ -81,7 +87,7 @@
     'prefix': 'observer'
     'leftLabel': 'Ember'
     'body': """
-      observer('${1:property}', function() {
+      Ember.observer('${1:property}', function() {
         ${2:// body}
       }),
     """
@@ -90,7 +96,7 @@
     'prefix': 'on'
     'leftLabel': 'Ember'
     'body': """
-      on('${1:property}', function() {
+      Ember.on('${1:property}', function() {
         ${2:// body}
       }),
     """
@@ -107,14 +113,14 @@
   'computed.alias(...)':
     'prefix': 'alias'
     'leftLabel': 'Ember'
-    'body': 'computed.alias(\'${2:property}\')',
+    'body': 'Ember.computed.alias(\'${2:property}\')',
 
   #
   #
   # Route Snippets
   #
   'Route: model(...){ ... }':
-    'prefix': 'model'
+    'prefix': 'modelh'
     'leftLabel': 'Ember'
     'body': """
       model(params = {}) {
@@ -151,7 +157,7 @@
     'prefix': 'didReceiveAttrs'
     'leftLabel': 'Ember'
     'body':"""
-      didReceiveAttrs(){
+      didReceiveAttrs() {
         this._super(...arguments);
         ${1}
       },
@@ -162,7 +168,7 @@
     'prefix': 'didRender'
     'leftLabel': 'Ember'
     'body':"""
-      didRender(){
+      didRender() {
         this._super(...arguments);
         ${1}
       },
@@ -172,7 +178,7 @@
     'prefix': 'didInsertElement'
     'leftLabel': 'Ember'
     'body':"""
-      didInsertElement(){
+      didInsertElement() {
         this._super(...arguments);
         ${1}
       },
@@ -182,7 +188,7 @@
     'prefix': 'willDestroyElement'
     'leftLabel': 'Ember'
     'body':"""
-      willDestroyElement(){
+      willDestroyElement() {
         this._super(...arguments);
         ${1}
       },

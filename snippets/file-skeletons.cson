@@ -12,12 +12,13 @@
     'leftLabel': 'Ember'
     'body': """
       import Ember from 'ember';
-      const { Route } = Ember;
 
-      export default Route.extend({({
+      export default Ember.Route.extend({
+
         model: function() {
           ${1:// body}
         },
+
       });
     """
 
@@ -26,10 +27,11 @@
     'leftLabel': 'Ember'
     'body': """
       import Ember from 'ember';
-      const { Controller } = Ember;
 
-      export default Controller.extend({({
+      export default Ember.Controller.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -38,10 +40,11 @@
     'leftLabel': 'Ember'
     'body': """
       import Ember from 'ember';
-      const { Service } = Ember;
 
-      export default Service.extend({({
+      export default Ember.Service.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -50,10 +53,11 @@
     'leftLabel': 'Ember'
     'body': """
       import Ember from 'ember';
-      const { Component } = Ember;
 
-      export default Component.extend({({
+      export default Ember.Component.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -64,7 +68,9 @@
       import Ember from 'ember';
 
       export default Ember.Mixin.create({
+
         ${1:// body}
+
       });
     """
 
@@ -73,10 +79,11 @@
     'leftLabel': 'Ember'
     'body': """
       import Ember from 'ember';
-      const { Object } = Ember;
 
-      export default Object.extend({({
+      export default Ember.Object.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -87,7 +94,9 @@
       import Ember from 'ember';
 
       export default Ember.Handlebars.makeBoundHelper(function() {
+
         ${1:// body}
+
       });
     """
 
@@ -96,9 +105,8 @@
     'leftLabel': 'Ember'
     'body': """
       import Ember from 'ember';
-      const { Helper } = Ember;
 
-      export default Helper.extend({({
+      export default Ember.Helper.extend({
         compute: function() {
           ${1:// body}
         }
@@ -112,7 +120,9 @@
       import DS from 'ember-data';
 
       export default DS.Model.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -123,7 +133,9 @@
       import DS from 'ember-data';
 
       export default DS.RESTAdapter.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -134,7 +146,9 @@
       import DS from 'ember-data';
 
       export default DS.ActiveModelAdapter.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -145,7 +159,9 @@
       import DS from 'ember-data';
 
       export default DS.JSONAPIAdapter.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -156,7 +172,9 @@
       import DS from 'ember-data';
 
       export default DS.RESTSerializer.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -167,7 +185,9 @@
       import DS from 'ember-data';
 
       export default DS.ActiveModelSerializer.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -178,7 +198,9 @@
       import DS from 'ember-data';
 
       export default DS.JSONAPISerializer.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -189,7 +211,9 @@
       import DS from 'ember-data';
 
       export default DS.Transforms.extend({
+
         ${1:// body}
+
       });
     """
 
@@ -198,10 +222,13 @@
     'leftLabel': 'Ember'
     'body': """
       export default {
+
         name: '${1:name}',
+
         initialize: function() {
           ${2:// body}
         }
+
       };
     """
 
@@ -210,7 +237,9 @@
     'leftLabel': 'Ember'
     'body': """
       export default function ${1:myUtility}() {
+
         ${2:// body}
+
       };
     """
 
